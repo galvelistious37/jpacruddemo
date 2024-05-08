@@ -24,17 +24,36 @@ public class JpacruddemoApplication {
 
 	private void createInstructor(AppDAO appDAO) {
 		// Create the instructor
+//		Instructor tempInstructor =
+//				new Instructor(
+//						"John",
+//						"Robertson",
+//						"john@email.com");
+//
+//		// Create the InstructorDetail
+//		InstructorDetail tempInstructorDetail =
+//				new InstructorDetail(
+//						"http://someurl",
+//						"gee-tar");
+//
+//		// Associate the objects
+//		tempInstructor.setInstructorDetail(tempInstructorDetail);
+//
+//		// Save the Instructor
+//		System.out.println("Saving: " + tempInstructor);
+//		appDAO.save(tempInstructor);
+
 		Instructor tempInstructor =
 				new Instructor(
-						"John",
-						"Robertson",
-						"john@email.com");
+						"Jekk",
+						"Baerr",
+						"jekk@baerr.com");
 
 		// Create the InstructorDetail
 		InstructorDetail tempInstructorDetail =
 				new InstructorDetail(
-						"http://someurl",
-						"gee-tar");
+						"http://fedrul-aygent",
+						"fedrul-aygent-stuff");
 
 		// Associate the objects
 		tempInstructor.setInstructorDetail(tempInstructorDetail);
