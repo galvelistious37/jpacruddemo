@@ -3,8 +3,10 @@ package com.johnny.spring.jpacruddemo.dao;
 import com.johnny.spring.jpacruddemo.entity.Instructor;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+@Repository
 public class AppDAOImpl implements AppDAO{
     // Define field for entity manager
     private EntityManager entityManager;
