@@ -18,8 +18,18 @@ public class JpacruddemoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(AppDAO appDAO){
 		return runner -> {
-			createInstructor(appDAO);
+//			createInstructor(appDAO);
+			findInstructor(appDAO);
 		};
+	}
+
+	private void findInstructor(AppDAO appDAO) {
+		int id = 2;
+		System.out.println("Finding instructor with id: " + id);
+		Instructor tempInstructor = appDAO.findInstructorById(id);
+		System.out.println("tempIsntructor: " + tempInstructor);
+		System.out.println("The associated instructorDetails only: "
+				+ tempInstructor.getInstructorDetail());
 	}
 
 	private void createInstructor(AppDAO appDAO) {
