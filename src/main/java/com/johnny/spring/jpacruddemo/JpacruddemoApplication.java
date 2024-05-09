@@ -19,8 +19,29 @@ public class JpacruddemoApplication {
 	public CommandLineRunner commandLineRunner(AppDAO appDAO){
 		return runner -> {
 //			createInstructor(appDAO);
-			findInstructor(appDAO);
+//			findInstructor(appDAO);
+//			deleteInstructor(appDAO);
+			findInstructorDetail(appDAO);
 		};
+	}
+
+	private void findInstructorDetail(AppDAO appDAO) {
+		int id = 3;
+		// Get the instructorDetail object
+		InstructorDetail tempInstructorDetail = appDAO.findInstructorDetailById(id);
+
+		// Print the InstructorDetail
+		System.out.println(tempInstructorDetail);
+
+		// Print the associated Instructor
+		System.out.println(tempInstructorDetail.getInstructor());
+	}
+
+	private void deleteInstructor(AppDAO appDAO) {
+		int id = 1;
+		System.out.println("Deleting instructor id: " + id);
+		appDAO.deleteInstructorById(id);
+		System.out.println("Done!");
 	}
 
 	private void findInstructor(AppDAO appDAO) {
